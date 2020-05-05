@@ -143,9 +143,14 @@ function generateQA() {
       var wrongAnswer;
       do {
         wrongAnswer =
-          (1 + Math.round(9 * Math.random())) *
-          (1 + Math.round(9 * Math.random()));
-      } while (answers.indexOf(wrongAnswer) > -1);
+          (1 + Math.round(19 * Math.random())) *
+          (1 + Math.round(19 * Math.random()));
+        // if (wrongAnswer % 10 == correctAnswer % 10) continue;
+      } while (
+        answers.indexOf(wrongAnswer) > -1 ||
+        wrongAnswer % 10 !== correctAnswer % 10
+      );
+      //   if (wrongAnswer % 10 == correctAnswer % 10)
       document.getElementById("box" + i).innerHTML = wrongAnswer;
       answers.push(wrongAnswer);
     }
