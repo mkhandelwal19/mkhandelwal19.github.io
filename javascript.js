@@ -3,6 +3,7 @@ var score;
 var counter;
 var timeRemaining;
 var correctAnswer;
+var visitor;
 //if we click on the start/reset button
 
 document.getElementById("startReset").onclick = function () {
@@ -14,6 +15,16 @@ document.getElementById("startReset").onclick = function () {
 
     //change mode to playing
     playing = true;
+
+    //player information
+    visitor = prompt("Please enter your name.");
+    window.alert(
+      "Hi " +
+        visitor.toUpperCase() +
+        "!" +
+        "\n\n" +
+        "Let's start how good you are with multiplications"
+    );
 
     //set score to 0
     score = 0;
@@ -97,7 +108,13 @@ function startCountdown() {
       show("gameOver");
 
       document.getElementById("gameOver").innerHTML =
-        "<p>game over!</p><p>Your score is " + score + ".</p>";
+        "<p>game over " + visitor + "!</p><p>Your score is " + score + ".</p>";
+
+      //   document.cookie = "visitor = " + visitor;
+      //   document.cookie = "score = " + score;
+
+      //   document.getElementById("userScore").innerHTML +=
+      //     "<br />" + "<p>" + visitor + " : " + score + "</p>";
 
       //hide time remaining, correct, wrong
       hide("timeRemaining");

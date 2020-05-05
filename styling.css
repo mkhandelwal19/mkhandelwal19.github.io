@@ -178,3 +178,22 @@ html {
   z-index: 2;
   display: none;
 }
+
+/* #result {
+  width: 150px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  left: 700px;
+  top: 20px;
+  box-shadow: 0px 4px 0px #9da853;
+  -moz-box-shadow: 0px 4px 0px #9da853;
+  -webkit-box-shadow: 0px 4px 0px #9da853;
+}
+
+#userScore {
+  text-align: center;
+  color: white;
+} */
