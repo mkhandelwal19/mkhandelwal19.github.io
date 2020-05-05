@@ -23,7 +23,7 @@ document.getElementById("startReset").onclick = function () {
         visitor.toUpperCase() +
         "!" +
         "\n\n" +
-        "Let's start how good you are with multiplications"
+        "Let's see how good you are with multiplications"
     );
 
     //set score to 0
